@@ -104,7 +104,7 @@ void setup() {
 
 void loop() {
   long distance = readUltrasonic();
-  bool lineDetected = false;
+  bool lineDetected = readLineSensor();
 
   updateState(distance, lineDetected);
   runStateAction(distance, lineDetected);
@@ -156,7 +156,7 @@ bool readLineSensor() {
 // =======================
 
 void updateState(long distance, bool lineDetected) {
-  if (distance <= 0) {
+  if (distance <= 1) {
     currentState = STOP_FAILSAFE;
   }
   else if (distance < obstacleThreshold && lineDetected == true) {
