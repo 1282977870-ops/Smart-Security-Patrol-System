@@ -1,7 +1,7 @@
 # Smart Security Patrol System
 
 ## Project Overview
-Smart Security Patrol System is an ESP32-based embedded intelligent patrol robot designed for security monitoring. The robot uses ultrasonic and line sensors to detect obstacles and boundaries, then changes its behaviour using a Finite State Machine (FSM).
+Smart Security Patrol System is an ESP32-based embedded intelligent patrol robot designed for security monitoring. The robot uses an ultrasonic sensor and a simulated boundary sensor to detect obstacles and unsafe boundaries, then changes its behaviour using a Finite State Machine (FSM).
 
 ## Specialisation
 Option A – Embedded Intelligence (Wokwi)
@@ -12,11 +12,11 @@ ESP32 Microcontroller
 ## Components
 - ESP32
 - Ultrasonic Sensor
-- Line Sensor
+- Simulated Boundary Sensor / Line Sensor
 - Servo Motor
-- LED Indicator
-- DC Motors
-- Motor Driver
+- LED Indicators
+- Stepper Motor
+- A4988 Motor Driver
 
 ## Main Features
 - Autonomous patrol behaviour
@@ -24,6 +24,8 @@ ESP32 Microcontroller
 - Boundary detection
 - FSM-based decision making
 - Safety and failsafe behaviour
+- Servo-based scanning
+- LED state feedback
 
 ## Files
 - `src/smart_security_patrol_system.ino` – full source code
